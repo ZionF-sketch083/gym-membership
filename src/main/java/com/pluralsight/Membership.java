@@ -37,12 +37,5 @@ public class Membership {
         this.baseRate = baseRate;
     }
 
-    @Override
-    public String toString() {
-        return "Membership{" +
-                "name='" + name + '\'' +
-                ", months=" + months +
-                ", baseRate=" + baseRate +
-                '}';
-    }
+
 }
