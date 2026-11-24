@@ -17,4 +17,13 @@ public class FamilyMembership extends Membership{
     public void setExtraMembers(int extraMembers) {
         this.extraMembers = extraMembers;
     }
+
+
+
+    @Override
+    public String toString() {
+        return "FamilyMembership{" +
+                "extraMembers=" + extraMembers +
+                '}';
+    }
 }

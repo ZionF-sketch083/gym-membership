@@ -17,4 +17,18 @@ public class PremiumMembership extends Membership{
     public void setGuestPasses(int guestPasses) {
         this.guestPasses = guestPasses;
     }
+
+    @Override
+    public BigDecimal getMonthlyPrice(){
+        BigDecimal price = getBaseRate();
+        price = price.add(BigDecimal.valueOf(18.50));
+        return price;
+    }
+
+    @Override
+    public String toString() {
+        return "PremiumMembership{" +
+                "guestPasses=" + guestPasses +
+                '}';
+    }
 }

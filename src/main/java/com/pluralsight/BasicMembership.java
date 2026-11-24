@@ -19,4 +19,21 @@ public class BasicMembership extends Membership{
     public void setOffPeakOnly(boolean offPeakOnly) {
         this.offPeakOnly = offPeakOnly;
     }
+
+    @Override
+    public BigDecimal getMonthlyPrice() {
+        BigDecimal price = getBaseRate();
+        if (offPeakOnly){
+            price = price.subtract(BigDecimal.valueOf(5.00));
+        }
+
+        return price;
+    }
+
+    @Override
+    public String toString() {
+        return "BasicMembership{" +
+                "offPeakOnly=" + offPeakOnly +
+                '}';
+    }
 }

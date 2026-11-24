@@ -37,5 +37,16 @@ public class Membership {
         this.baseRate = baseRate;
     }
 
+    public BigDecimal getMonthlyPrice(){
+        return baseRate;
+    }
 
+    @Override
+    public String toString() {
+        return "Membership{" +
+                "name='" + name + '\'' +
+                ", months=" + months +
+                ", baseRate=" + baseRate +
+                '}';
+    }
 }
